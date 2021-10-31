@@ -6,7 +6,7 @@ from calendar import HTMLCalendar
 
 # Create your views here.
 
-def index(request, year, month):
+def index(request, year=date.today().year, month=date.today().month):
     month = int(month)
     year = int(year)
     if year < 2000 or year > 2099: year = date.today().year
